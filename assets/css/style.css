@@ -138,6 +138,7 @@ body.dark{
   align-items: center;
   justify-content: center;
   gap: 1rem;
+   padding: 1rem;
 }
 
 
@@ -200,7 +201,7 @@ body.dark{
   width: 230px;
   height: 350px;
   display: block;
-  margin-left: 90px;
+  margin-left: 105px;
   margin-bottom: 40px;
 
 }
@@ -301,7 +302,7 @@ body.dark{
 .Productos-Carrito{
   background-color: rgb(211, 210, 210);
   width: 200px;
-  margin-left: 60px;
+  margin-left: 70px;
   border-radius: 5px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
