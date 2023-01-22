@@ -1,0 +1,639 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --first-color: hsl(354, 78%, 60%);
+  --button-color: hsl(0, 0%, 17%);
+  --button-color-alt: hsl(0, 0%, 21%);
+  --card-color: hsl(0, 0%, 90%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --text-color-light: hsl(0, 0%, 55%);
+  --body-color: hsl(206, 4%, 97%);
+  --container-color: #fff;
+  --border-color: hsl(0, 0%, 94%);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Roboto', sans-serif;
+}
+
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+/*
+    --first-color: hsl(182, 53%, 74%);
+    --button-color: hsl(246, 16%, 12%);
+    --button-color-alt: hsl(0, 0%, 28%);
+    --card-color: hsla(246, 16%, 5%, .5);
+    --title-color: hsl(0, 0%, 95%);
+    --text-color: hsl(0, 0%, 75%);
+    --body-color: hsl(249, 19%, 14%);
+    --container-color: hsl(246, 16%, 12%);
+    --border-color: hsl(0, 0%, 20%);
+*/
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+ 
+}
+
+
+
+/* Navegacion  */
+
+
+
+body.dark{
+    --first-color: hsl(182, 53%, 74%);
+    --button-color: hsl(246, 16%, 12%);
+    --button-color-alt: hsl(0, 0%, 28%);
+    --card-color: hsla(246, 16%, 5%, .5);
+    --title-color: hsl(0, 0%, 95%);
+    --text-color: hsl(0, 0%, 75%);
+    --body-color: hsl(249, 19%, 14%);
+    --container-color: hsl(246, 16%, 12%);
+    --border-color: hsl(0, 0%, 20%);
+}
+
+.icono{
+  width: 30px;
+  fill: var(--first-color);
+  
+}
+
+.Nav{
+  display: flex;
+  align-items: center;
+}
+
+.loader{
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+
+
+}
+
+.loader.clean{
+  display: none;
+}
+
+.svg{
+  width: 100px;
+  fill: var(--first-color);
+  position: relative;
+  animation: iconoPrincipal 1.5s infinite ;
+}
+
+@keyframes iconoPrincipal {
+  0%{
+       top: 0;
+  }
+  50%{
+        top: -30px;
+  }
+  100%{
+        top: 0;
+  }
+}
+
+.Encabezado-General{
+  box-shadow: 2px 2px 8px rgb(237, 233, 233);
+  height: 80px;
+  width: 100%;
+ }
+
+.Store{
+   margin-left: -50px;
+}
+
+.Navegacion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.Contenedor-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.Cart-conteiner{
+  background-color: rgb(232, 227, 227);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+}
+
+.Cart-conteiner.hide{
+     left: 100%;
+}
+
+.Menu-Contenido{
+  display: block;
+  margin: 60px auto;
+  text-align: center;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.Menu-Contenido h2{
+  margin: 20px auto;
+}
+
+
+
+.Products-conteiner{
+  background-color: rgb(232, 227, 227);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 1s all;
+  overflow-y: auto;
+}
+
+.Products-conteiner.white{
+  left: 100%;
+}
+/* Contenido Main Principal  */
+
+.Imagen img{
+    width: 250px;
+    margin: 50px auto;
+    margin-left: -5px;
+   
+   
+}
+
+
+
+.Imagen{
+  background-color: var(--first-color);
+  width: 230px;
+  height: 350px;
+  display: block;
+  margin-left: 90px;
+  margin-bottom: 40px;
+
+}
+
+.Principal{
+  margin: 20px auto;
+}
+.Titulo{
+  width: 200px;
+  margin-left: 15px;
+  color: var(--title-color);
+}
+
+.Description{
+  padding: 1rem;
+  color: var(--text-color-light);
+}
+
+.Monto{
+  padding: 1rem;
+  color: var(--first-color);
+}
+
+.Botones{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+ 
+}
+
+.PrimerBoton{
+  height: 40px;
+  width: 100px;
+  border: 0;
+  background-color: var(--text-color-light);
+}
+.SegundoBoton{
+  height: 50px;
+  width: 120px;
+  border: 0;
+  background-color: var(--button-color);
+  color: white;
+  box-shadow: 2px 2px 8px rgba(0,0,0);
+}
+
+.Productos-General{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 1rem;
+   margin-left: 30px;
+   text-align: center;
+}
+
+.Productos-del-Carrito{
+ margin: 40px auto;
+}
+
+.Show-All{
+  width: 100px;
+}
+
+.Barra{
+  font-size: 3rem;
+  color: white;
+}
+
+.Parrafo1{
+  width: 80px;
+  text-align: center;
+}
+
+.Parrafo2{
+   width: 90px;
+   text-align: center;
+}
+
+.Productos2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px auto;
+}
+
+.img-Product{
+  width: 200px;
+}
+
+.Productos-Detalles{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.Productos-Carrito{
+  background-color: rgb(211, 210, 210);
+  width: 200px;
+  margin-left: 60px;
+  border-radius: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.Productos-Detalles{
+  background-color: var(--container-color);
+  height: 70px;
+  border-bottom-left-radius: 10px;
+  color: var(--text-color);
+}
+
+.Barrita{
+  font-size: 2.5rem;
+  color: rgb(227, 224, 224);
+}
+
+.Buton{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  border: 0;
+  background-color: rgb(236, 233, 233);
+}
+
+.Buton:hover{
+  background-color: var(--first-color);
+}
+
+.imgPrimero{
+  width: 100px;
+}
+
+.Boton-eliminar{
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  position: relative;
+  left: 65px;
+  background-color: var(--first-color);
+  text-align: center;
+}
+
+
+/* Productos dentro del Carrito  */
+
+
+.Consumir{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    width: 250px;
+    margin-left: 60px;
+    place-items: center;
+    margin: 20px auto;
+
+}
+
+.ProductosCarrito{
+  background-color: antiquewhite;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.texto{
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  color: var(--text-color-light);
+}
+
+.title{
+  text-align: center;
+}
+
+.Contenido-Final{
+ 
+  width: 300px;
+  margin-left: 10px;
+  position: relative;
+  top: 500px;
+  text-align: center;
+  position: static;
+}
+.VaciarCarritoGeneral{
+  width: 150px;
+  height: 25px;
+  border: 0;
+  border-radius: 25px;
+  background-color: rgb(26, 104, 239);
+  color: white;
+  cursor: pointer;
+}
+.VaciarCarritoGeneral:hover{
+  background-color: rgb(53, 79, 230);
+}
+
+.Contenido-Final p{
+  margin: 15px auto;
+  color: var(--text-color-light);
+ }
+
+ /* Footer    */
+ .Contenedor-Footer{
+  background-color: rgb(190, 189, 189);
+  height: 600px;
+  width: 100%;
+  color: var(--text-color-light);
+ }
+
+ .Interes{
+   padding: 1.5rem;
+ }
+
+ .Parrafito{
+  margin: 10px auto;
+ }
+
+ .Social{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .5rem;
+  margin-left: 20px;
+}
+
+.Navegacion2{
+  display: none;
+}
+
+
+
+@media screen and (min-width:768px){
+   
+  .Navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9rem;
+  }
+
+  .Navegacion2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    left: -180px;
+  }
+
+  .Store{
+    position: relative;
+    left: -80px;
+    font-size: 1rem;
+  }
+
+  .Imagen{
+    margin-left: 490px;
+  }
+
+  
+
+  .Description{
+    width: 400px;
+    
+  }
+
+  .Contenedor-Primero{
+     position: absolute;
+     bottom: 200px;
+     left: 40px;
+    
+  }
+
+ .Productos-General{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 2rem;
+ 
+  
+  }
+  .Productos{
+    position: relative;
+    left: 150px;
+  }
+
+ .Productos-Carrito{
+   margin-left: 300px;
+ }
+
+ .Consumir{
+  margin-left: 15px;
+ }
+
+ .Products-conteiner{
+  background-color: rgb(232, 227, 227);
+  width: 500px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 60%;
+  transition: 1s all;
+  overflow-y: auto;
+}
+ 
+.Contenedor-Footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 500px;
+ 
+  
+}
+
+.menu{
+  display: none;
+}
+.Home{
+  color: var(--first-color);
+}
+
+}
+
+
+@media screen and (min-width: 1024px){
+
+   
+  .Navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   }
+
+  .Navegacion2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    position: relative;
+    left: -450px;
+  }
+
+  
+
+ .Nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+  .Imagen{
+    margin-left: 58%;
+    width: 450px;
+    text-align: center;
+    height: 500px;
+  }
+
+  .Imagen img{
+    width: 400px;
+    margin: 100px auto;
+   
+     
+  }
+
+  .Contenedor-Primero{
+      left: 105px;
+  }
+
+  .Description{
+    width: 600px;
+  }
+
+  .Titulo{
+    font-size: 2rem;
+    width: 300px;
+  }
+
+  .Productos-del-Carrito{
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     place-items: center;
+     margin-left: -150px;
+     margin-bottom: 60px;
+   
+  }
+
+  .Productos-Detalles{
+     margin-bottom: -15px;
+  }
+
+  .Productos-General{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    text-align: center;
+    margin-bottom: 100px;
+   }
+
+   .Products-conteiner{
+    background-color: rgb(232, 227, 227);
+    width: 500px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 70%;
+    transition: 1s all;
+    overflow-y: auto;
+  }
+
+  .Contenido-Final{
+    position: static;
+    margin-left: 80px;
+  }
+
+  .icono{
+    width: 50px;
+  }
+
+  .Home{
+    color: var(--first-color);
+  }
+
+  
+
+  }
+
+
+
+
+
+
+  

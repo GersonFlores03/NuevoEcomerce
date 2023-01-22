@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academlo Store</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="Encabezado-General">
+      <div id="loader" class="loader">
+        <svg
+          class="svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 48.92 56.48"
+          >
+          <title>Academlo Logo</title>
+          <g>
+            <g>
+              <path
+                d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z"
+              ></path>
+              <path
+                d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <nav class="Navegacion">
+        <div class="Nav">
+          <svg
+            class="icono"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 48.92 56.48"
+          >
+            <title>Academlo Logo</title>
+            <g>
+              <g>
+                <path
+                  d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          <h4>Store</h4>
+        </div>
+        <div class="Store">
+          <!--Vacio-->
+        </div>
+        <div class="Navegacion2">
+          <h5 class="Home">Home</h5>
+          <h5>Products</h5>
+        </div>
+
+        <div class="Contenedor-icon">
+          <i class="bx bx-sun bx-sm" id="theme-sun"></i>
+          <div class="Card-btn" id="Card-btn">
+            <i class="bx bxs-shopping-bag"></i>
+            <span class="Counter" id="Counter">0</span>
+          </div>
+          <div class="menu" id="menu">
+            <i class="bx bx-menu"></i>
+          </div>
+        </div>
+        <div class="Cart-conteiner hide" id="Cart-conteiner">
+          <div class="Card-Close" id="Cart-Close">
+            <i class="bx bx-x bx-md"></i>
+          </div>
+          <div class="Menu-Contenido">
+            <div class="Menu-Libre">
+              <h2>Home</h2>
+              <h2>Products</h2>
+            </div>
+          </div>
+        </div>
+        <div class="Products-conteiner white" id="Products-conteiner">
+          <div class="Products-Close" id="Products-Close">
+            <i class="bx bx-exit-fullscreen bx-md"></i>
+            <div class="Consumir" id="Consumir"></div>
+            <div class="Contenido-Final">
+              <p class="PrecioTotal">
+                Precio total : $
+                <span id="Monto-Precio" class="Monto-Precio">0</span>
+              </p>
+              <button class="VaciarCarritoGeneral" id="Vaciar-carrito">
+                Buy
+              </button>
+              <p id="carrito-comprado" class="Carrito-comprado disable">
+                Thanks <i class="bx bx-smile"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="Contenido-Principal">
+      <div class="Imagen">
+        <img src="./assets/images/home.png" alt="" />
+      </div>
+      <div class="Principal">
+        <div class="Contenedor-Primero">
+          <h2 class="Titulo">New SweatShirt Collections 2023</h2>
+          <p class="Description">
+            Latest arrival of the new Hanes Midweight Crewneck
+            imported from the 2023 series, whit a modern desing.
+          </p>
+          <div class="Monto-Total">
+            <p class="Monto">$14.00</p>
+          </div>
+          <div class="Botones">
+            <div>
+              <button class="PrimerBoton">Discover</button>
+            </div>
+            <div>
+              <button class="SegundoBoton">Add To Car</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Productos-General">
+        <div>
+          <div class="Show-All">
+            <h3>Show All</h3>
+            <p>Show All Products</p>
+          </div>
+        </div>
+        <div>|</div>
+        <div>
+          <div class="Show-All">
+            <h3>Hoodies</h3>
+            <p>3 products</p>
+          </div>
+        </div>
+        <div>|</div>
+        <div>
+          <div class="Show-All">
+            <h3>Shirts</h3>
+            <p>4 products</p>
+          </div>
+        </div>
+        <div>|</div>
+        <div>
+          <div class="Show-All">
+            <h3>SweatShirt</h3>
+            <p>4 products</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="Productos-del-Carrito" id="Productos-del-Carrito"></div>
+
+    <footer class="Contenedor-Footer">
+      <div class="Interes">
+        <h3>Our Informacion</h3>
+        <p class="Parrafito">Perú trujillo</p>
+      </div>
+      <div class="Interes">
+        <h3>About Us</h3>
+        <p class="Parrafito">Support center</p>
+        <p class="Parrafito">Customers support</p>
+        <p class="Parrafito">About us</p>
+        <p class="Parrafito">Copy rigth</p>
+      </div>
+      <div class="Interes">
+        <h3>Products</h3>
+        <p class="Parrafito">Hoodies</p>
+        <p class="Parrafito">Shirts</p>
+        <p class="Parrafito">SweatShirt</p>
+      </div>
+      <div class="Interes">
+        <h3>Social</h3>
+
+        <i class="bx bxl-facebook"></i>
+
+        <i class="bx bxl-twitter"></i>
+
+        <i class="bx bxl-instagram-alt"></i>
+
+        <a href="https://www.linkedin.com/in/gerson-flores-narciso-52628b256/"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="./assets/js/stock.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
