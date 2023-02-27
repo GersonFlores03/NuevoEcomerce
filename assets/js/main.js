@@ -42,8 +42,6 @@ const loadComponente = () => {
 
 
 document.addEventListener("DOMContentLoaded", ( )=> {
-
-
-    loadComponente()
+      loadComponente()
 })
 

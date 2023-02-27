@@ -131,6 +131,7 @@ body.dark{
   justify-content: center;
   justify-content: space-between;
   padding: 1rem;
+  
 }
 
 .Contenedor-icon{
@@ -138,7 +139,7 @@ body.dark{
   align-items: center;
   justify-content: center;
   gap: 1rem;
-   padding: 1rem;
+  padding: 1rem;
 }
 
 
@@ -201,7 +202,7 @@ body.dark{
   width: 230px;
   height: 350px;
   display: block;
-  margin-left: 105px;
+  margin-left: 144px;
   margin-bottom: 40px;
 
 }
@@ -249,19 +250,21 @@ body.dark{
 }
 
 .Productos-General{
-   display: grid;
-   grid-template-columns: repeat(4,1fr);
-   gap: 1rem;
-   margin-left: 30px;
-   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  place-items: center;
+  margin-left: 40px;
+   
 }
 
 .Productos-del-Carrito{
- margin: 40px auto;
+   padding: 1rem;
+   
 }
 
 .Show-All{
   width: 100px;
+  margin-bottom: 30px;
 }
 
 .Barra{
@@ -388,18 +391,7 @@ body.dark{
   text-align: center;
   position: static;
 }
-.VaciarCarritoGeneral{
-  width: 150px;
-  height: 25px;
-  border: 0;
-  border-radius: 25px;
-  background-color: rgb(26, 104, 239);
-  color: white;
-  cursor: pointer;
-}
-.VaciarCarritoGeneral:hover{
-  background-color: rgb(53, 79, 230);
-}
+
 
 .Contenido-Final p{
   margin: 15px auto;
@@ -417,6 +409,11 @@ body.dark{
  .Interes{
    padding: 1.5rem;
  }
+ .linkedin{
+  text-decoration: none;
+  color: grey;
+  cursor: pointer;
+ }
 
  .Parrafito{
   margin: 10px auto;
@@ -432,6 +429,47 @@ body.dark{
 
 .Navegacion2{
   display: none;
+}
+/* Carrito  */
+.carrito-comprado img{
+  width: 300px;
+
+  height: 600px;
+  left: 16%;
+  position: absolute;
+  top: 200px;
+}
+
+.Consumir{
+display: grid;
+place-items: center;
+width: 100%;
+margin-left: 0;
+}
+
+.Buy{
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+margin-left: 0;
+height: 300px;
+overflow-y: scroll;
+position: static;
+
+
+
+}
+
+.Buy p{
+margin-bottom: 20px;
+}
+.VaciarCarritoGeneral{
+ width: 150px;
+ height: 30px;
+ border-radius: 0;
+ border-radius: 8px;
+ background-color: rgb(58, 212, 58);
 }
 
 
@@ -473,8 +511,8 @@ body.dark{
 
   .Contenedor-Primero{
      position: absolute;
-     bottom: 200px;
-     left: 40px;
+     top: 130px;
+     padding-left: 3rem;
     
   }
 
@@ -483,9 +521,14 @@ body.dark{
    align-items: center;
    justify-content: center;
    gap: 2rem;
+   
+}
+
+/*.Productos-del-Carrito{
  
-  
-  }
+  }*/
+
+
   .Productos{
     position: relative;
     left: 150px;
@@ -493,10 +536,13 @@ body.dark{
 
  .Productos-Carrito{
    margin-left: 300px;
+
+  
  }
 
  .Consumir{
   margin-left: 15px;
+ 
  }
 
  .Products-conteiner{
@@ -570,7 +616,8 @@ body.dark{
   }
 
   .Contenedor-Primero{
-      left: 105px;
+    left: 105px;
+      
   }
 
   .Description{
@@ -612,7 +659,7 @@ body.dark{
     top: 0;
     left: 70%;
     transition: 1s all;
-    overflow-y: auto;
+   
   }
 
   .Contenido-Final{
@@ -626,6 +673,55 @@ body.dark{
 
   .Home{
     color: var(--first-color);
+  }
+
+  /* Carrito de Compras */
+
+  .carrito-comprado img{
+      width: 300px;
+    
+      height: 600px;
+      left: 16%;
+      position: absolute;
+      top: 200px;
+  }
+
+  .Consumir{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-left: 0;
+   
+   
+   
+   
+  }
+
+  .Buy{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0;
+    height: 200px;
+    overflow-y: scroll;
+    position: static;
+   
+   
+   
+    
+  }
+
+  .Buy p{
+    margin-bottom: 20px;
+  }
+  .VaciarCarritoGeneral{
+     width: 150px;
+     height: 30px;
+     border-radius: 0;
+     border: 0;
+     border-radius: 8px;
+     background-color: rgb(58, 212, 58);
   }
 
   

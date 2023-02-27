@@ -1,3 +1,6 @@
+
+
+
 const items = [
     {
       id: 1,
@@ -24,6 +27,7 @@ const items = [
       quantity: 1
     },
     
+    
    
    
 
@@ -35,8 +39,13 @@ const items = [
    const vaciarCarro = document.getElementById("Vaciar-carrito")
    const ContadordeProductos = document.getElementById("Counter")
    const precioTotal = document.getElementById("Monto-Precio")
-   const contenedorCarritoComprado = document.getElementById("carrito-comprado")
+  
    
+  const bolsaVacia = document.createElement("img")
+  bolsaVacia.src = "./assets/images/empty-cart.png";
+  bolsaVacia.alt= "BolsaVacia"
+  const contenedorCarritoComprado = document.getElementById("carrito-comprado")
+
    
    let carrito = []
 
@@ -51,9 +60,22 @@ const items = [
 
 
 vaciarCarro.addEventListener("click",()=>{
-       carrito.length=0
-       ActualizarCarrito()
-})
+      if( carrito.length = 0){
+       
+       
+      }else{
+        ActualizarCarrito()
+        contenedorCarritoComprado.appendChild(bolsaVacia)
+        Swal.fire({
+          icon: 'success',
+          title: 'Bought',
+          showConfirmButton: false,
+          timer: 1500
+        })
+       }
+    
+      
+});
         
 
         items.forEach(producto => {
@@ -81,14 +103,15 @@ vaciarCarro.addEventListener("click",()=>{
 
         
      })
-  
-
- 
-
+     
+     
+     
+     
+     
 
    function agregarAlCarrito(produid){
      
-           const exite = carrito.some (prod => prod.id === produid)
+           const exite = carrito.some(prod => prod.id === produid)
             if(exite){
                      const produ =carrito.map(prods => {
                       if(prods.id=== produid){
@@ -96,24 +119,42 @@ vaciarCarro.addEventListener("click",()=>{
                       }
                 })
             }else{
-
-
               const products = items.find(product => product.id=== produid)
-              carrito.push(products)
-              console.log(carrito)
+              
+              if(carrito.push(products)){
+                  bolsaVacia.remove(bolsaVacia)
+              }
+              
+             
+              //console.log(carrito)
             }
 
-        
-           ActualizarCarrito();
+        ActualizarCarrito();
          
    }
+   
+   
+        
+    
+     
+  
+
+   
+
+
+
+
 
     function eliminarDelCarrito(prodts){
         const item = carrito.find(produs => produs.id === prodts)
         const indice = carrito.indexOf(item)
         carrito.splice(indice,1)
+        if( carrito <= 0 ){
+          contenedorCarritoComprado.appendChild(bolsaVacia)
+        }
+       
         ActualizarCarrito()
-        console.log(eliminarDelCarrito)
+        //console.log(eliminarDelCarrito)
    }
 
 
@@ -129,7 +170,8 @@ vaciarCarro.addEventListener("click",()=>{
               Conteiner.innerHTML= `
               
               <img class="imgPrimero"  src=${produs.image} alt= ""> 
-              <div class = "texto"> 
+              <div class = "texto">
+              <div> </div> 
               <p class ="title">${produs.name} </p>
               <h5>Precio: $${produs.price}.00 </h5>
               <h5>Cantidad : <span id="Cantidad">${produs.quantity} </span></h5>
